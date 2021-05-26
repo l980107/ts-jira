@@ -4,7 +4,7 @@
 
 > 使用 React17 - Typescript4 - AntD4 的仿 Jira 系统
 
-###  运行
+### 运行
 
 ```
 npm install
