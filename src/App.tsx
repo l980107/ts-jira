@@ -1,11 +1,13 @@
 import React from 'react';
-import { ProjectList } from './pages/project-list';
+// import { ProjectList } from './pages/project-list';
+import { Login } from './pages/Login';
 // import { Demo } from './TsDemo';
 
 function App() {
     return (
         <div className='App'>
-            <ProjectList />
+            <Login />
+            {/* <ProjectList /> */}
             {/* <Demo /> */}
         </div>
     );
