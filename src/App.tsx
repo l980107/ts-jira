@@ -1,6 +1,7 @@
 import React from 'react';
 // import { ProjectList } from './pages/project-list';
-import { Login } from './pages/Login';
+
+import { Login } from './pages/login';
 // import { Demo } from './TsDemo';
 
 function App() {
