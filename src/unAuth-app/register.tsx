@@ -1,25 +1,16 @@
-import { FormEvent } from 'react';
+import { FormEvent, useState } from 'react';
+import { useAuth } from '../context/authProvider';
 
-export const Login = () => {
-    const url = process.env.REACT_APP_API_URL;
-
-    const login = (param: { username: string; password: string }) => {
-        fetch(`${url}/login`, {
-            method: 'post',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(param),
-        });
-    };
+export const Register = () => {
+    const { register } = useAuth();
 
     const submitHandle = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         //获取数据
         const username = (e.currentTarget.elements[0] as HTMLInputElement).value;
         const password = (e.currentTarget.elements[1] as HTMLInputElement).value;
-        //登陆
-        login({ username, password });
+        //登陆注册
+        register({ username, password });
     };
 
     return (
@@ -32,7 +23,7 @@ export const Login = () => {
                 <label htmlFor='password'>密码</label>
                 <input type='password' id='password' />
             </div>
-            <button type='submit'>登陆</button>
+            <button type='submit'>注册</button>
         </form>
     );
 };
